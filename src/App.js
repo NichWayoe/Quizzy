@@ -1,11 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import LoginController from './View Controllers/LoginController.react';
+import UserProvider from './Providers/UserProvider.react';
+import QuizzyAppController from './Controllers/QuizzyAppController.react';
 
 function App() {
   return (
-    <div className="App">
-      <LoginController></LoginController>
+    <div>
+      <UserProvider>
+      <QuizzyAppController></QuizzyAppController>
+      </UserProvider>
     </div>
   );
 }

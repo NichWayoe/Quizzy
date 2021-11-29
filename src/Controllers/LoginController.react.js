@@ -1,4 +1,5 @@
-import firebase from "../FirebaseManager/DatabaseManager.react.js"
+import firebase from '../FirebaseManager/DatabaseManager.react'
+import HomeViewController from './HomeViewController.react'
 import React, { useState, useEffect} from "react";
 
 var firebaseui = require('firebaseui');
