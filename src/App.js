@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import LoginController from './Controllers/LoginController.react';
 import NavBar from './Navigation/NavBar.react'
 import HomeViewController from './Controllers/HomeViewController.react';
+import ProfileViewController from './Controllers/ProfileViewController.react'; 
+import LeaderBoardViewController from './Controllers/LeaderBoardViewController.react'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Route path="/" element={<QuizzyAppController/>}/>
       <Route path="/signin" exact element={<LoginController/>}/>
       <Route path="/home" exact element={<HomeViewController/>}/>
+      <Route path="/myprofile" exact element={<ProfileViewController/>}/>
+      <Route path="/leaderboard" exact element={<LeaderBoardViewController/>}/>
       </Routes>
       </BrowserRouter>
       </UserProvider> 
