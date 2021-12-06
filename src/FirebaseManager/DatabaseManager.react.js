@@ -27,6 +27,14 @@ export const fetchQuizCategoriesFromDatabase = async() => {
   return querySnapshot.docs.map(doc => doc.data());
 }
 
+export const fetchAllQuizzesFromCategoryInDatabase = async(categoryTitle) => {
+  const querySnapshot = await firebase.firestore().collection('quizzes').where('category', '==', categoryTitle)
+  .withConverter(Quiz.convertor).get()
+  // eslint-disable-next-line 
+  const events = querySnapshot.docs.map((doc: any) => doc.data())
+  return querySnapshot.docs.map(doc => doc.data());
+}
+
 export const uploadQuizToDatabase = async(quiz:Quiz) => {
   // eslint-disable-next-line 
   const ref = await firebase.firestore().collection('Quizzes').withConverter(Quiz.convertor).add(quiz)

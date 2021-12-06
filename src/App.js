@@ -7,6 +7,7 @@ import NavBar from './Navigation/NavBar.react'
 import HomeViewController from './Controllers/HomeViewController.react';
 import ProfileViewController from './Controllers/ProfileViewController.react'; 
 import LeaderBoardViewController from './Controllers/LeaderBoardViewController.react'
+import CategoryDetailViewController from './Controllers/CategoryDetailViewController.react'
 
 function App() {
   return (
@@ -17,8 +18,11 @@ function App() {
       <Route path="/" element={<QuizzyAppController/>}/>
       <Route path="/signin" exact element={<LoginController/>}/>
       <Route path="/home" exact element={<HomeViewController/>}/>
+      <Route path="/home/:categoryTitle" exact element={<CategoryDetailViewController/>}/>
       <Route path="/myprofile" exact element={<ProfileViewController/>}/>
       <Route path="/leaderboard" exact element={<LeaderBoardViewController/>}/>
+
+      
       </Routes>
       </BrowserRouter>
       </UserProvider> 

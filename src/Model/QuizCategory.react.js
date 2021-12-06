@@ -1,13 +1,19 @@
 export default class QuizCategory {
-  #name;
+  #title;
+  #subtitle;
   #quizzes;
-  constructor(name, quizzes) {
-      this.#name = name
+  constructor(title, subtitle, quizzes) {
+      this.#title = title
+      this.#subtitle = subtitle
       this.#quizzes = quizzes
     }
     getTitle() {
-        return this.name;
+        return this.#title;
     }
+
+    getSubtitle() {
+      return this.#subtitle;
+  }
 
     getQuizzes() {
         return this.quizzes;
@@ -16,13 +22,13 @@ export default class QuizCategory {
     static convertor = {
       toFirestore: (QuizCategory) => {
           return {
-              name: QuizCategory.getName(),
-              quizzes: QuizCategory.getQuizzes(),
+              title: QuizCategory.getName(),
+              subtitle: QuizCategory.getQuizzes(),
               };
       },
       fromFirestore: function(snapshot, options) {
           const data = snapshot.data(options);
-          return new QuizCategory(data.name,  data.quizzes);
+          return new QuizCategory(data.title,  data.subtitle, data.quizzes);
       }
   }
     
