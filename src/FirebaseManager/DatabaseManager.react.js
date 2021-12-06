@@ -1,5 +1,7 @@
 // Import the functions you need from the SDKs you need
 import firebase from "firebase/compat/app";
+import QuizCategory from '../Model/QuizCategory.react'
+import Quiz from '../Model/Quiz.react'
 import "firebase/compat/firestore";
 import 'firebase/compat/auth';
 
@@ -11,16 +13,24 @@ const firebaseConfig = {
   messagingSenderId: "784318139432",
   appId: "1:784318139432:web:4b9d5308a3e3c9b60db91d",
   measurementId: "G-D5N9SCVK5S"
-  // apiKey: "AIzaSyCL4FnV_Kyeatz8Wp1NB4i2qMKrCKwvnvc",
-  // authDomain: "bogglesolver-82bc5.firebaseapp.com",
-  // projectId: "bogglesolver-82bc5",
-  // storageBucket: "bogglesolver-82bc5.appspot.com",
-  // messagingSenderId: "1052124738284",
-  // appId: "1:1052124738284:web:a515a0148408e9fcfe6bc9",
-  // measurementId: "G-E3T05L3K99"
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+
+export const fetchQuizCategoriesFromDatabase = async() => {
+  const querySnapshot = await firebase.firestore().collection('QuizCategories')
+  .withConverter(QuizCategory.convertor).get()
+  // eslint-disable-next-line 
+  const events = querySnapshot.docs.map((doc: any) => doc.data())
+  return querySnapshot.docs.map(doc => doc.data());
+}
+
+export const uploadQuizToDatabase = async(quiz:Quiz) => {
+  // eslint-disable-next-line 
+  const ref = await firebase.firestore().collection('Quizzes').withConverter(Quiz.convertor).add(quiz)
+
+}
 
 export default firebase;

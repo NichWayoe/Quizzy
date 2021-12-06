@@ -1,4 +1,10 @@
 export default class Quiz {
+    #title;
+    #category;
+    #author;
+    #questions;
+    #numberOfQuestions;
+    #answers;
     constructor() {
       this.#title = ''
       this.#category = ''
@@ -53,7 +59,7 @@ export default class Quiz {
                 author: Quiz.getAuthor(),
                 questions: Quiz.getQuestions(),
                 answers: Quiz.getAnswers(),
-                cateogry: Quiz.getCategory(),
+                category: Quiz.getCategory(),
                 title: Quiz.getTitle(),
                 };
         },
