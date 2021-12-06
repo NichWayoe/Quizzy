@@ -16,8 +16,7 @@ const uiConfig = {
 function LoginController() {
   return (
     <div>
-      <h1>Quizzy</h1>
-      <p>Please sign-in:</p>
+      
       <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
     </div>
   );

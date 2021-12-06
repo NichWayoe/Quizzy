@@ -1,6 +1,12 @@
-
+import {MyButton,PostCard} from "../Components/styledComponents"
+import HomeCard from "../Components/HomeCard";
 function HomeView(props) {
 return (
-    <div>Welcome Home</div>)
+    <>
+    <div>Explore</div>
+    <HomeCard />
+    </>
+    
+    )
 }
 export default HomeView;
