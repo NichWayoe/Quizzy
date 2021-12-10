@@ -18,7 +18,7 @@ const uiConfig = {
 function LoginController() {
   return (
     <div>
-      <Box sx={{padding:5, px:50, flexGrow:2, overflow:"hidden"}}>  
+      <Box sx={{padding:5, px:60, flexGrow:2, overflow:"hidden"}}>  
       <LoginCard>
 
         <CardHeader avatar={<img style={{paddingLeft:"25%"}} src={icon}/>}title = {<Typography variant="h5" sx={{color:"white", alignText:"center", paddingLeft:10}}>
