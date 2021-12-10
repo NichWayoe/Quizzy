@@ -24,4 +24,13 @@ export const PostCard=styled(Card)({
   } 
 })
 
+export const LoginCard=styled(Card)({
+  backgroundColor:"#4A4242",
+  width: 700,
+  height: 600, 
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  
+})
+
+
 
