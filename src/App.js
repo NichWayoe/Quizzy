@@ -8,6 +8,7 @@ import HomeViewController from './Controllers/HomeViewController.react';
 import ProfileViewController from './Controllers/ProfileViewController.react'; 
 import LeaderBoardViewController from './Controllers/LeaderBoardViewController.react'
 import CategoryDetailViewController from './Controllers/CategoryDetailViewController.react'
+import WelcomeQuizScreenViewController from './Controllers/WelcomeQuizScreenViewController.react'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path="/home/:categoryTitle" exact element={<CategoryDetailViewController/>}/>
       <Route path="/myprofile" exact element={<ProfileViewController/>}/>
       <Route path="/leaderboard" exact element={<LeaderBoardViewController/>}/>
+      <Route path="/quiz/:quizID" exact element={<WelcomeQuizScreenViewController/>}/>
 
       
       </Routes>
