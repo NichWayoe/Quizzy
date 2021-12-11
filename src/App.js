@@ -12,6 +12,7 @@ import WelcomeQuizScreenViewController from './Controllers/WelcomeQuizScreenView
 
 function App() {
   return (
+    <div style={{width:'100vw%', overflow:"hidden", height:'100%vh'}}>
     <UserProvider>
       <BrowserRouter>
       <NavBar/>
@@ -28,6 +29,7 @@ function App() {
       </Routes>
       </BrowserRouter>
       </UserProvider> 
+      </div>
   );
 }
 

@@ -14,7 +14,6 @@ export default function HomeCard(props) {
   console.log(title)
   console.log(subtitle)
     return (
-        <div>
             <PostCard >
               <CardActionArea onClick={onClick}>
             <CardHeader  sx={{fontSize:"14", marginLeft:10}}
@@ -34,6 +33,5 @@ export default function HomeCard(props) {
       </CardContent>
       </CardActionArea>
             </PostCard>
-        </div>
     )
 }

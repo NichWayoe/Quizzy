@@ -4,6 +4,7 @@ import HomeCard from "../Components/HomeCard";
 import {fetchQuizCategoriesFromDatabase} from "../FirebaseManager/DatabaseManager.react"
 import { useNavigate } from "react-router-dom";
 import Box from '@mui/material/Box';
+import { Grid } from '@mui/material';
 
 function HomeViewController(props) {
     const [quizCategoryCards, setQuizCategoryCards] = useState();
@@ -21,11 +22,10 @@ function HomeViewController(props) {
                 return null
             }
             return (
-            <Box sx={{ flexGrow: 2, overflow: 'hidden', padding:1, px:50 }}>
             <HomeCard title={category.getTitle()} subtitle={category.getSubtitle()} onClick={()=>onClickOnCategoryCard(category)}></HomeCard>
-            </Box>
             )
         })
+        console.log(categoryCards)
         setQuizCategoryCards(categoryCards) 
         })
     },[onClickOnCategoryCard])
