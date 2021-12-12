@@ -6,22 +6,27 @@ import { fetchQuizFromDatabase } from '../FirebaseManager/DatabaseManager.react'
 
 export default function WelcomeQuizScreenViewController(props) {
     const [startQuiz, setStartQuiz] = useState(false);
+
     const [quiz, setQuiz] = useState(null);
     let params = useParams();
     useEffect(() => {
         fetchQuizFromDatabase(params.quizID).then((quiz) => {
             setQuiz(quiz)})
         },[params.quizID])
-
     const onClickStart = () => {
         if (startQuiz === false) {
             setStartQuiz(true)
         }
-        else{
+        else {
             setStartQuiz(false)
+            
         }
     }
-    return (startQuiz? <WelcomeQuizScreenView quiz={quiz} onClickStart={onClickStart}/>
-                        :<TakeQuizViewController quiz={quiz}/>)
-
+    
+    return (
+        <div>
+            {!startQuiz? <WelcomeQuizScreenView quiz={quiz} onClickStart={onClickStart}/>
+                        :<TakeQuizViewController quiz={quiz}/> }
+        </div>
+        )
 }

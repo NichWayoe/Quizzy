@@ -6,23 +6,30 @@ export default class Quiz {
     #questions;
     #numberOfQuestions;
     #answers;
-    #answerOptionsForQuestions;
-    #timeAllowed
-    constructor(title,category,author,questions,numberOfQuestions,answers, answerOptionsForQuestions, timeAllowed, id) {
+    #answerOptions;
+    #timeAllowed;
+    #description;
+    constructor(title,category,author,questions,numberOfQuestions,answers, answerOptions, timeAllowed, id, description) {
       this.#title = title
       this.#id = id;
       this.#category = category
+      this.#description = description
       this.#author = author
       this.#questions = questions
       this.#timeAllowed = timeAllowed
       this.#numberOfQuestions = numberOfQuestions
-      this.#answerOptionsForQuestions= answerOptionsForQuestions
-      this.#answers=answers
+      this.#answerOptions = answerOptions
+      this.#answers = answers
     }
 
     getTitle() {
         return this.#title;
     }
+
+    getDescription() {
+        return this.#description;
+    }
+
 
     getQuestions() {
         return this.#questions;
@@ -39,8 +46,8 @@ export default class Quiz {
     getCategory() {
         return this.#category;
     }
-    getAnswerOptionsForQuestions() {
-        return this.#answerOptionsForQuestions;
+    getAnswerOptions() {
+        return this.#answerOptions
     }
     getTimeAllowed(){
         return this.#timeAllowed;
@@ -73,13 +80,14 @@ export default class Quiz {
                 category: Quiz.getCategory(),
                 title: Quiz.getTitle(),
                 numberOfQuestions: Quiz.getNumberOfQuestions(),
-                answerOptionsForQuestions: Quiz.getAnswerOptionsForQuestions(),
+                answerOptions: Quiz.getAnswerOptionsForQuestions(),
                 timeAllowed: Quiz.getTimeAllowed(),
+                description: Quiz.getDescription(),
                 };
         },
         fromFirestore: function(snapshot, options) {
             const data = snapshot.data(options);
-            return new Quiz(data.title, data.category, data.author, data.questions, data.numberOfQuestions, data.answers, data.answerOptionsForQuestions, data.timeAllowed, snapshot.id);
+            return new Quiz(data.title, data.category, data.author, data.questions, data.numberOfQuestions, data.answers, data.answerOptions, data.timeAllowed, snapshot.id, data.description);
         }
     }
   }

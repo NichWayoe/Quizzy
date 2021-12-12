@@ -24,6 +24,8 @@ export const PostCard=styled(Card)({
   } 
 })
 
+
+
 export const LoginCard=styled(Card)({
   backgroundColor:"#4A4242",
   width: 700,
