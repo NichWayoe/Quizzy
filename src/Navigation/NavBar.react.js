@@ -15,7 +15,7 @@ export default function NavBar() {
         <Nav>
           <img src={icon}/>
         <NavLink to="/home">
-          <hi>Quizzy</hi>
+          <h1>Quizzy</h1>
         </NavLink>
         <NavLink to="/home">
           <AiFillHome size={50}/>
