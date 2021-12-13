@@ -8,7 +8,6 @@ export const Nav = styled.nav`
     justify-Content: space-between;
     padding: 0.5rem calc((100vw - 1000px) /2);
     z-index: 10;
-    box-shadow: 0 3px 5px 2px rgba(0, 0, 0, .3);
 `
 
 export const NavDropdown = styled.div`

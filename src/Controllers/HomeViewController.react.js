@@ -22,6 +22,7 @@ function HomeViewController(props) {
                 return null
             }
             return (
+            
             <HomeCard title={category.getTitle()} subtitle={category.getSubtitle()} onClick={()=>onClickOnCategoryCard(category)}></HomeCard>
             )
         })
