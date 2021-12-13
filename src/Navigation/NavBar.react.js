@@ -5,7 +5,7 @@ import {Nav, NavBtn, NavBtnLink, NavLink} from './NavBarElements.react'
 import { AiFillHome} from "react-icons/ai";
 import {FaUserAlt} from "react-icons/fa";
 import {BsFillBarChartFill} from "react-icons/bs";
-
+import {BiBookAdd} from "react-icons/bi"
 export default function NavBar() {
   const user = useContext(UserContext);
   return (
@@ -18,8 +18,9 @@ export default function NavBar() {
         <NavLink to="/home">
           <AiFillHome/>
         </NavLink>
-        <NavLink to="/leaderboard">
-          <BsFillBarChartFill/>
+        <NavLink to="/createquiz">
+                 <BiBookAdd/>
+
         </NavLink>
         <NavLink to="/myprofile">
           <FaUserAlt/>

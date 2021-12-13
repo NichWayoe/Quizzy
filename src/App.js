@@ -6,9 +6,9 @@ import LoginController from './Controllers/LoginController.react';
 import NavBar from './Navigation/NavBar.react'
 import HomeViewController from './Controllers/HomeViewController.react';
 import ProfileViewController from './Controllers/ProfileViewController.react'; 
-import LeaderBoardViewController from './Controllers/LeaderBoardViewController.react'
 import CategoryDetailViewController from './Controllers/CategoryDetailViewController.react'
 import WelcomeQuizScreenViewController from './Controllers/WelcomeQuizScreenViewController.react'
+import CreateQuizViewController from './Controllers/CreateQuizViewController.react';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       <Route path="/home" exact element={<HomeViewController/>}/>
       <Route path="/home/:categoryTitle" exact element={<CategoryDetailViewController/>}/>
       <Route path="/myprofile" exact element={<ProfileViewController/>}/>
-      <Route path="/leaderboard" exact element={<LeaderBoardViewController/>}/>
+      <Route path="/createquiz" exact element={<CreateQuizViewController/>}/>
       <Route path="/quiz/:quizID" exact element={<WelcomeQuizScreenViewController/>}/>
 
       
