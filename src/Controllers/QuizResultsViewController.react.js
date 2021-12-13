@@ -1,5 +1,4 @@
 import QuizResultsView from'../Views/QuizResultsView.react'
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import React from "react";
 
 export default function QuizResultsViewController(props) {
@@ -7,7 +6,7 @@ export default function QuizResultsViewController(props) {
    let score = 0;
    for (let i=1; i <=  numberOfQuestions; i++) {
        console.log(userAnswers[i])
-       if  (userAnswers[i] == answers[i]) {
+       if  (userAnswers[i] === answers[i]) {
            score += 1
     
        }

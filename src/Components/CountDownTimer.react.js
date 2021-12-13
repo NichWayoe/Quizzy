@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react'
 
 export default function CountDownTimer(props) {
-    const { hours = 0, minutes = 0, seconds = 60, onTimerDidFinished} = props;
+    const { hours = 0, minutes = 0, seconds = 60, onTimerDidFinished, style} = props;
     const [[hrs, mins, secs], setTime] = useState([hours, minutes, seconds]);
     const tick = () => {
         if (hrs === 0 && mins === (0 && secs === 0)) {
@@ -23,7 +23,7 @@ export default function CountDownTimer(props) {
 
     
     return (
-        <div>
+        <div style={style}>
             <p>{`${hrs.toString().padStart(2, '0')}:${mins
             .toString()
             .padStart(2, '0')}:${secs.toString().padStart(2, '0')}`}</p> 

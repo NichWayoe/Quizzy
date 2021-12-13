@@ -1,4 +1,4 @@
-import {CardHeader,CardContent, Typography, Box, Divider} from '@mui/material';
+import {CardHeader, Typography, Box} from '@mui/material';
 import icon from '../Icons/icon.png'
 import {LoginCard} from '../Components/styledComponents'
 

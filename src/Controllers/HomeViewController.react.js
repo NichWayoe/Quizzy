@@ -3,8 +3,6 @@ import React, {useEffect, useState, useCallback} from "react";
 import HomeCard from "../Components/HomeCard";
 import {fetchQuizCategoriesFromDatabase} from "../FirebaseManager/DatabaseManager.react"
 import { useNavigate } from "react-router-dom";
-import Box from '@mui/material/Box';
-import { Grid } from '@mui/material';
 
 function HomeViewController(props) {
     const [quizCategoryCards, setQuizCategoryCards] = useState();

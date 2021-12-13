@@ -1,6 +1,8 @@
 import {Button} from '../Navigation/NavBarElements.react'
 import obj from '../images/obj.jpg'
-import { bottomNavigationActionClasses } from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+
 export default function WelcomeQuizScreenView(props) {
     //ui for overview of the test like time available, author of test, etc
     // it also has a start button
@@ -48,6 +50,10 @@ export default function WelcomeQuizScreenView(props) {
         )
     } 
     else {
-    return (<h1>Loading...</h1>)
+        return (
+            <Box sx={{ display: 'flex' }}>
+              <CircularProgress />
+            </Box>
+          );
     }
 }

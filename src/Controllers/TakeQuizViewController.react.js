@@ -2,7 +2,6 @@ import TakeQuizView from '../Views/TakeQuizView.react'
 import QuizView from '../Views/QuizView.react'
 import React, {useState} from "react";
 import QuizResultsViewController from './QuizResultsViewController.react';
-import { render } from 'react-dom';
 
 export default function TakeQuizViewController(props) {
     const [userAnswers, setUserAnswers] = useState({})

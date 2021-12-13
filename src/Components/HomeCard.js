@@ -1,13 +1,9 @@
 import {PostCard} from "./styledComponents"
 import React from 'react'
-import Avatar from '@mui/material/Avatar';
 import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
-import styled, { css } from 'styled-components';
 import Typography from '@mui/material/Typography';
-import Divider from "@mui/material/Divider" 
 import icon from '../Icons/icon.png'
 
 export default function HomeCard(props) {
