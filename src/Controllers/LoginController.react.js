@@ -18,11 +18,12 @@ const uiConfig = {
 function LoginController() {
   return (
     <div>
-      <Box sx={{padding:5, px:60, flexGrow:2, overflow:"hidden"}}>  
+ 
+      <Box sx={{padding:5, px:60, flexGrow:2, overflow:"hidden",paddingRight: 20, paddingLeft: 50}}>  
       <LoginCard>
 
-        <CardHeader avatar={<img style={{paddingLeft:"25%"}} src={icon}/>}title = {<Typography variant="h5" sx={{color:"white", alignText:"center", paddingLeft:10}}>
-            Welcome to Quizzy
+        <CardHeader avatar={<img style={{paddingLeft:"25%"}} src={icon}/>}title = {<Typography variant="h5" sx={{color:"white", alignText:"center", paddingLeft:10, borderRadius: 30, fontWeight: 900}}>
+            Welcome to Quizzy!
           </Typography>} />
           <Divider sx={{bgcolor:"white"}}/>
           
