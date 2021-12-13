@@ -6,7 +6,7 @@ export default function TakeQuizView(props) {
     return ( <div>
         <form onSubmit={onSubmit}>
             <FormControl
-                sx={{ m: 3 }}
+                sx={{ m: 3}}
                 component="fieldset"x
                 variant="standard"
             >

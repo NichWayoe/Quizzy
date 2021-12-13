@@ -4,7 +4,7 @@ export default function WelcomeQuizScreenView(props) {
     // it also has a start button
     const {quiz, onClickStart} = props;
     if (quiz) {
-        return(<div>
+        return(<div style={{ backgroundColor:"black", background:"url('https://media.giphy.com/media/ZGIJxpFDY8gt5dVbgX/giphy.gif')", backgroundSize:"cover", height:"100vh", padding:"0", margin:"0"}}>
             <h1>{quiz[0].getTitle()}</h1>
             <h2>Time Allowed: {quiz[0].getTimeAllowed()} minutes</h2>
             <h2>{quiz[0].getDescription()}</h2>
@@ -13,6 +13,6 @@ export default function WelcomeQuizScreenView(props) {
         </div>)
     } 
     else {
-    return (<h1>Loading</h1>)
+    return (<h1>Loading...</h1>)
     }
 }
