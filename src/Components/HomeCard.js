@@ -25,8 +25,8 @@ export default function HomeCard(props) {
         title={<Typography variant="h4" sx={{color:"white", fontWeight:'bold', fontSize: 34}}>{title}</Typography>} //add quiz name here
 
       />
-      <CardContent sx={{marginLeft:10}}>
-          <Typography>{subtitle}</Typography>
+      <CardContent sx={{marginLeft:10, marginBottom:10}}>
+          <Typography sx={{color:"white", fontSize:20}}>{subtitle}</Typography>
       </CardContent>
       </CardActionArea>
             </PostCard>

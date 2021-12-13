@@ -28,7 +28,7 @@ function LoginController() {
           
         
         <CardContent>
-        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} /></CardContent>
+        <StyledFirebaseAuth  uiConfig={uiConfig} firebaseAuth={firebase.auth()} /></CardContent>
         </LoginCard>
       </Box>
     </div>

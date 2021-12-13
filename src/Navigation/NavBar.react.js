@@ -18,14 +18,14 @@ export default function NavBar() {
           <hi>Quizzy</hi>
         </NavLink>
         <NavLink to="/home">
-          <AiFillHome/>
+          <AiFillHome size={50}/>
         </NavLink>
         <NavLink to="/createquiz">
-                 <BiBookAdd/>
+                 <BiBookAdd size={50}/>
 
         </NavLink>
         <NavLink to="/myprofile">
-          <FaUserAlt/>
+          <FaUserAlt size={50}/>
         </NavLink>
 
         <NavBtn>
