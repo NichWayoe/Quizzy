@@ -14,10 +14,13 @@ export default function TakeQuizViewController(props) {
     const questions = quiz[0].getQuestions()
     const answerOptions = quiz[0].getAnswerOptions()
     const answers = quiz[0].getAnswers()
+    const timeAllowed = quiz[0].getTimeAllowed()
     const numberOfQuestions = quiz[0].getNumberOfQuestions()
 
 
-   
+   const handleTimerDidFinished = () => {
+       setFinishedQuiz(true)
+   }
     const handleRadioChange = (event)=> { 
         userAnswers[event.target.name] = event.target.value 
         console.log(userAnswers)
@@ -38,5 +41,5 @@ export default function TakeQuizViewController(props) {
         setFinishedQuiz(true)
       };
     return (finishedQuiz? <QuizResultsViewController answers={answers} userAnswers={userAnswers} numberOfQuestions={numberOfQuestions}></QuizResultsViewController>
-    :<TakeQuizView questions = {questionsUI} onSubmit={handleSubmit}/>)
+    :<TakeQuizView questions = {questionsUI} onSubmit={handleSubmit} timeAllowed={timeAllowed} handleTimerDidFinished={handleTimerDidFinished}/>)
 }
