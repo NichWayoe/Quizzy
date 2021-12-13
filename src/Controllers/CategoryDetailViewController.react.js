@@ -18,7 +18,14 @@ export default function CategoryDetailViewController() {
             if (quiz === null) {
                 return null
             }
-            return (<HomeCard title={quiz.getTitle()} subtitle={quiz.getCategory()} onClick={()=>{ onClickOnQuizCard(quiz)}}></HomeCard>)
+            return (
+            <div style={{marginLeft:100, marginTop:40}}>
+                            <HomeCard  title={quiz.getTitle()} subtitle={quiz.getCategory()} onClick={()=>{ onClickOnQuizCard(quiz)}}>
+                            
+                            </HomeCard>
+                            </div>)
+
+            
         })
         setQuizCards(quizCards) 
         })

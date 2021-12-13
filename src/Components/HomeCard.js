@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import styled, { css } from 'styled-components';
 import Typography from '@mui/material/Typography';
 import Divider from "@mui/material/Divider" 
+import icon from '../Icons/icon.png'
 
 export default function HomeCard(props) {
   const {title, subtitle, onClick} = props;
@@ -18,16 +19,12 @@ export default function HomeCard(props) {
               <CardActionArea onClick={onClick}>
             <CardHeader  sx={{fontSize:"14", marginLeft:10}}
         avatar={
-          <Avatar sx={{ bgcolor: "red", width:60, height:60}}>
-            R
-          </Avatar>
+          <img style={{marginRight:10}}src={icon}/>
         }
         
         title={<Typography variant="h4" sx={{color:"white", fontWeight:'bold', fontSize: 34}}>{title}</Typography>} //add quiz name here
-        subheader={<Typography sx={{color:"white", fontStyle:"italic", fontSize:14}}> December 5, 2021, Entertainment</Typography>}
 
       />
-      <Divider sx={{bgcolor:"white"}}/>
       <CardContent sx={{marginLeft:10}}>
           <Typography>{subtitle}</Typography>
       </CardContent>
