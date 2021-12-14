@@ -12,7 +12,7 @@ describe('Test for the takeQuizComponent', () => {
     <BrowserRouter>
     <HomeViewController />
     </BrowserRouter>);
-
+    
     const categoryCard = screen.queryByText(/Politics/);
     expect(categoryCard).toBeNull();
   });

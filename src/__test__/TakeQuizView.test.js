@@ -5,7 +5,7 @@ import Quiz from '../Model/Quiz.react';
 
   describe('Test for the takeQuizComponent', () => {
     let quiz;
-  
+
     beforeAll(() => {
       quiz = new Quiz("work and play", "Politics", "Nick", ["what", "Ama"], 2, {1:1, 2:1},{1:["WW","SS","SSS","ERR"], 2:["DAS","DSDS","DS","RE"]},60,"DDDS","YES THIS IS A QUIZ")
     });  
