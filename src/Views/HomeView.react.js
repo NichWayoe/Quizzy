@@ -1,3 +1,6 @@
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+
 function HomeView(props) {
  const {categoryCards} = props
  const styles = {
@@ -15,14 +18,19 @@ function HomeView(props) {
         gridTemplateColumns: '1fr 1fr',
     }
   };
+if (categoryCards) {
+    return 
+        <div style={styles.surface}>
+            <div style={styles.grid}>
+                {categoryCards}
+            </div>
+        </div>
+}
+else {
+    return(<Box sx={{ display: 'flex' }}>
+    <CircularProgress />
+  </Box>)
+}
 
-return (
-    <div style={styles.surface}>
-    <div style={styles.grid}>
-        {categoryCards}
-    </div>
-    </div>
-    
-    )
 }
 export default HomeView;

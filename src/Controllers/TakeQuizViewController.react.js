@@ -2,13 +2,19 @@ import TakeQuizView from '../Views/TakeQuizView.react'
 import QuizView from '../Views/QuizView.react'
 import React, {useState} from "react";
 import QuizResultsViewController from './QuizResultsViewController.react';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 export default function TakeQuizViewController(props) {
     const [userAnswers, setUserAnswers] = useState({})
     const [finishedQuiz, setFinishedQuiz] = useState(false)
     const {quiz} = props;
     if (quiz == null){
-        return <div>Loading</div>
+        return (
+            <Box sx={{ display: 'flex' }}>
+              <CircularProgress />
+            </Box>
+          );
     }
     const questions = quiz[0].getQuestions()
     const answerOptions = quiz[0].getAnswerOptions()
