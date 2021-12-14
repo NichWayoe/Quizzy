@@ -1,23 +1,15 @@
 import { FormControl, TextField, Grid, Button } from '@mui/material';
+import InformationComponent from "../Components/InformationComponent.react"
+import React, { useState } from 'react';
 
 export default function CreateQuizView() {
+    const [flag, setFlag] = useState(false);
+    const [title,setTitle]=useState("Add Quiz Information")
     return <div>
-
+        <h1 style={{marginLeft:"40%", color:"red"}}>{title}</h1>
         <FormControl >
-            <Grid container spacing={5} sx={{marginTop:10, padding:2, height:"50%", marginLeft:40, borderRadius:"10%"}}>
-                <Grid container item xs={6} direction="column">
-                    <TextField variant="filled" placeholder="First Name" sx={{padding:1}}/>
-                    <TextField variant="filled" placeholder="Category" sx={{padding:1}}/>
-                    <TextField variant="filled" placeholder="Description" sx={{padding:1}}/>
-
-                    </Grid> 
-                <Grid container item xs={6} direction="column">
-                <TextField variant="filled" placeholder="Last Name" sx={{padding:1}}/>
-                <TextField variant="filled" placeholder="Allowed Time" sx={{padding:1}}/>
-                <TextField variant="filled" placeholder="Title" sx={{padding:1}}/>
-                <Button variant="outlined" sx={{padding:1, marginTop:10}}> Next</Button>
-                </Grid>
-            </Grid>
+            {flag?<InformationComponent/>: <TextField/> }
+            
         </FormControl>
     </div>
 
