@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the takeQuizComponent renders correctly when there are no items 1`] = `
+<div>
+  <form>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "gap": "20px",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 20,
+          }
+        }
+      >
+        <p>
+          NaN:NaN:60
+        </p>
+      </div>
+      <button
+        className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1apck9s-MuiButtonBase-root-MuiButton-root"
+        disabled={false}
+        onBlur={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="submit"
+      >
+        Submit
+        <span
+          className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <fieldset
+      className="MuiFormControl-root css-1vgzwi7-MuiFormControl-root"
+    />
+  </form>
+</div>
+`;
+
+exports[`Test for the takeQuizComponent renders correctly when there are quiz given items 1`] = `
+<div>
+  <form>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "row",
+          "gap": "20px",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "fontSize": 20,
+          }
+        }
+      >
+        <p>
+          NaN:NaN:60
+        </p>
+      </div>
+      <button
+        className="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1apck9s-MuiButtonBase-root-MuiButton-root"
+        disabled={false}
+        onBlur={[Function]}
+        onContextMenu={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="submit"
+      >
+        Submit
+      </button>
+    </div>
+    <fieldset
+      className="MuiFormControl-root css-1vgzwi7-MuiFormControl-root"
+    />
+  </form>
+</div>
+`;
