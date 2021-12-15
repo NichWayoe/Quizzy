@@ -17,10 +17,7 @@ function HomeViewController() {
             if (category === null) {
                 return null
             }
-            return (
-            
-            <HomeCard title={category.getTitle()} subtitle={category.getSubtitle()} onClick={()=>onClickOnCategoryCard(category)}></HomeCard>
-            )
+            return (<HomeCard title={category.getTitle()} subtitle={category.getSubtitle()} onClick={()=>onClickOnCategoryCard(category)}></HomeCard>)
         })
         setQuizCategoryCards(categoryCards) 
         })

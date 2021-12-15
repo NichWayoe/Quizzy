@@ -19,12 +19,11 @@ function HomeView(props) {
     }
   };
 if (categoryCards) {
-    return 
-        <div style={styles.surface}>
+    return (<div style={styles.surface}>
             <div style={styles.grid}>
                 {categoryCards}
             </div>
-        </div>
+        </div>)
 }
 else {
     return(<Box sx={{ display: 'flex' }}>
