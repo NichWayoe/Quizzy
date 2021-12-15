@@ -1,28 +1,27 @@
 import { FormControl, TextField, Grid, Button } from '@mui/material';
 import InformationComponent from "../Components/InformationComponent.react"
-import AddQuizForm from "../Components/AddQuizForm.react"
 import React, { useState } from 'react';
 
-export default function CreateQuizView() {
-    const [flag, setFlag] = useState(true);
-    const [title,setTitle]=useState("Add Quiz Information")
-    const [button, setButton]= useState("Next")
-    function handleOnclick(e){
-        setFlag(!flag)
-        
-            setTitle("Add quiz questions")
-            setButton("Submit")
-        
+export default function CreateQuizView(props) {
+    const {onEditTitle, onEditDescription, onEditAnswer, onEditTimeAllowed, onSelectCategory, questionsField, onTapAddFieldHandler, onTapRemoveFieldHandler, onSubmit, categories} = props  
+    console.log(onSubmit)
+    return (<div>
+        <h1 style={{marginLeft:"40%", color:"red"}}>{"Add your quiz"}</h1>
+        <form onSubmit={onSubmit}>
+        <Button sx={{ mt: 1, mr: 1 , width:150, backgroundColor:"#4A4242", color:"white", marginRight:5}} type="submit" variant="outlined">
+            Submit
+            </Button>
+       
+        <FormControl sx={{ m: 3}}
+                component="fieldset"
+                variant="standard">
+            <InformationComponent onEditDescription={onEditDescription} onEditTitle={onEditTitle} onEditAnswer={onEditAnswer} onEditTimeAllowed={onEditTimeAllowed} onSelectCategory={onSelectCategory} categories={categories}/>
+            {questionsField}
+            <Button onClick={onTapAddFieldHandler}>+</Button>
+            <Button onClick={onTapRemoveFieldHandler}>x</Button>
 
-    }
-    function handleSubmit(e){
-        
-    }
-        return <div>
-        <h1 style={{color:"red", marginLeft:"40%"}}>{title}</h1>
-        <FormControl >
-            {flag?<InformationComponent onClick={handleOnclick} button={button}/>: <AddQuizForm button={button}/> }
         </FormControl>
-    </div>
+        </form>
+    </div>)
 
 }

@@ -45,8 +45,7 @@ export const fetchAllQuizzesFromCategoryInDatabase = async(categoryTitle) => {
 
 export const uploadQuizToDatabase = async(quiz:Quiz) => {
   // eslint-disable-next-line 
-  const ref = await firebase.firestore().collection('Quizzes').withConverter(Quiz.convertor).add(quiz)
-
+  const ref = await firebase.firestore().collection('quizzes').withConverter(Quiz.convertor).add(quiz)
 }
 
 export default firebase;

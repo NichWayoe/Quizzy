@@ -9,7 +9,7 @@ export default class Quiz {
     #answerOptions;
     #timeAllowed;
     #description;
-    constructor(title,category,author,questions,numberOfQuestions,answers, answerOptions, timeAllowed, id, description) {
+    constructor(title="",category="",author="",questions={},numberOfQuestions=0,answers={}, answerOptions={}, timeAllowed=0, id, description="") {
       this.#title = title
       this.#id = id;
       this.#category = category
@@ -60,15 +60,48 @@ export default class Quiz {
     getAnswers() {
         return this.#answers;
     }
+    setTitle(title) {
+        this.#title = title;
+    }
+    setCategory(category) {
+        this.#category = category;
+    }
+    setTimeAllowed(time) {
+        this.#timeAllowed = time;
+    }
+    setAuthor(author) {
+        this.#author = author;
+    }
+    setDescription(description) {
+        this.#description = description
+    }
 
-    addQuestions(question) {
-        if (question != null) {
-            this.#questions.add(question);
-            this.#numberOfQuestions += 1;
+
+    getAnswers() {
+        return this.#answers;
+    }
+
+
+    addQuestions(question, number) {
+        this.#questions[number] = question
+        this.#numberOfQuestions += 1
+    }
+
+    addAnswerOptions(number, pos, option) {
+        console.log(number)
+        console.log(pos)
+        if (number in this.#answerOptions) {
+            console.log("dd")
+            console.log(this.#answerOptions)
+            this.#answerOptions[number][pos] = option
+        }
+        else {
+            this.#answerOptions[number] = [0,0,0,0]
+            this.#answerOptions[number][pos] = option
         }
     }
-    deleteQuiz() {
-        
+    setAnswers(number, answer) {
+        this.#answers[number] = answer.toString()
     }
 
     static convertor = {
@@ -80,7 +113,7 @@ export default class Quiz {
                 category: Quiz.getCategory(),
                 title: Quiz.getTitle(),
                 numberOfQuestions: Quiz.getNumberOfQuestions(),
-                answerOptions: Quiz.getAnswerOptionsForQuestions(),
+                answerOptions: Quiz.getAnswerOptions(),
                 timeAllowed: Quiz.getTimeAllowed(),
                 description: Quiz.getDescription(),
                 };

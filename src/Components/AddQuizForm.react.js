@@ -14,7 +14,7 @@ function AddQuizForm(props) {
                     <TextField variant="filled" placeholder="Add fourth option" sx={{padding:1}}/>
                     <Grid container sx={{padding:1}} spacing={20}>
                         <Grid item xs={9}>
-                            <Button size="large" variant="outlined">Add Next Question</Button>
+                            <Button size="large"  variant="outlined">Add Next Question</Button>
                         </Grid>
                         <Grid item xs={2}>
                             <Button size="large" variant="outlined">Submit</Button>
