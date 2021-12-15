@@ -1,15 +1,27 @@
 import { FormControl, TextField, Grid, Button } from '@mui/material';
 import InformationComponent from "../Components/InformationComponent.react"
+import AddQuizForm from "../Components/AddQuizForm.react"
 import React, { useState } from 'react';
 
 export default function CreateQuizView() {
-    const [flag, setFlag] = useState(false);
+    const [flag, setFlag] = useState(true);
     const [title,setTitle]=useState("Add Quiz Information")
-    return <div>
-        <h1 style={{marginLeft:"40%", color:"red"}}>{title}</h1>
+    const [button, setButton]= useState("Next")
+    function handleOnclick(e){
+        setFlag(!flag)
+        
+            setTitle("Add quiz questions")
+            setButton("Submit")
+        
+
+    }
+    function handleSubmit(e){
+        
+    }
+        return <div>
+        <h1 style={{color:"red", marginLeft:"40%"}}>{title}</h1>
         <FormControl >
-            {flag?<InformationComponent/>: <TextField/> }
-            
+            {flag?<InformationComponent onClick={handleOnclick} button={button}/>: <AddQuizForm button={button}/> }
         </FormControl>
     </div>
 
