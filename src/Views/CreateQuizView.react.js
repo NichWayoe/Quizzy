@@ -6,7 +6,7 @@ export default function CreateQuizView(props) {
     const {onEditTitle, onEditDescription, onEditAnswer, onEditTimeAllowed, onSelectCategory, questionsField, onTapAddFieldHandler, onTapRemoveFieldHandler, onSubmit, categories} = props  
     console.log(onSubmit)
     return (<div>
-        <h1 style={{marginLeft:"40%", color:"red"}}>{"Add ypur quiz"}</h1>
+        <h1 style={{marginLeft:"40%", color:"red"}}>{"Add your quiz"}</h1>
         <form onSubmit={onSubmit}>
         <Button sx={{ mt: 1, mr: 1 , width:150, backgroundColor:"#4A4242", color:"white", marginRight:5}} type="submit" variant="outlined">
             Submit
