@@ -8,20 +8,20 @@ export default function CreateQuizView() {
     const [title,setTitle]=useState("Add Quiz Information")
     const [button, setButton]= useState("Next")
     function handleOnclick(e){
-        setFlag(false)
-        if (flag){
-            setButton("Next")
-            setTitle("Add Quiz Information")
-        }
-        else{
-            setButton("Submit")
+        setFlag(!flag)
+        
             setTitle("Add quiz questions")
-        }
+            setButton("Submit")
+        
+
+    }
+    function handleSubmit(e){
+        
     }
         return <div>
         <h1 style={{color:"red", marginLeft:"40%"}}>{title}</h1>
         <FormControl >
-            {flag?<InformationComponent onClick={handleOnclick} button={button}/>: <AddQuizForm onClick={handleOnclick}/> }
+            {flag?<InformationComponent onClick={handleOnclick} button={button}/>: <AddQuizForm button={button}/> }
         </FormControl>
     </div>
 
